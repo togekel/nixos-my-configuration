@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -221,5 +221,10 @@
   boot.extraModprobeConfig = ''
     options snd-intel-dspcfg dsp_driver=1
   '';
-
+  
+  # add mirror
+  # load `lib` into namespace at the file head with `{ config, pkgs, lib, ... }:`
+  nix.settings.substituters = lib.mkForce [ 
+    "https://mirrors.cernet.edu.cn/nix-channels/store"
+  ];
 }

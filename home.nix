@@ -23,10 +23,10 @@ in
   home.homeDirectory = "/home/feng";
   
   # Install Firefox.
-  programs.firefox = {
-    enable = true;
-    package = pkgs.firefox-bin;
-  };
+  # programs.firefox = {
+  #   enable = true;
+  #   package = pkgs.firefox-bin;
+  # };
 
   # Install and config git.
   programs.git = {

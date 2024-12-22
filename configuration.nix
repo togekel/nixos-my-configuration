@@ -65,6 +65,10 @@
   services.xserver.windowManager.exwm.enable = true;
 
 
+  # Enable TLP.
+  services.tlp.enable = true;
+
+
   # Disable xterm.
   services.xserver.excludePackages = [ pkgs.xterm ];
 

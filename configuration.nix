@@ -20,7 +20,7 @@
     networks = {
       "CUMT_Stu" = {
         auth = ''
-          key_mgmt=None
+          key_mgmt=NONE
           priority=0
         '';
       };

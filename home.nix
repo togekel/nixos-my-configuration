@@ -14,7 +14,6 @@ let
     p.pandas
     p.matplotlib
   ]);
-  spacemacsconfig = import ./.spacemacs;
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -140,13 +139,16 @@ in
   };
 
 
+  home.file.".spacemacs" = {
+    source = ./spacemacs;
+  };
+
+
   # Home Manager Activations.
   home.activation = {
     spacemacs-config = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       if [[ ! -d "$HOME/.emacs.d" && ! -e "$HOME/.spacemacs" ]] ; then
         run git clone https://github.com/syl20bnr/spacemacs.git $HOME/.emacs.d
-        run cp -r $spacemacsconfig $HOME/.spacemacs
-        run chmod 700 $HOME/.spacemacs
       fi
     '';
   };

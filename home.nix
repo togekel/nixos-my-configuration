@@ -28,6 +28,8 @@ in
     package = pkgs.firefox-bin;
   };
 
+  programs.light.enable = true;
+
   # Install and config git.
   programs.git = {
     enable = true;

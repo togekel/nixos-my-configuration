@@ -80,6 +80,7 @@ in
     pyright
     gcc
     cmake
+    gnumake
     clang-tools
   ]) ++
   my-zsh-additional-pkgs;

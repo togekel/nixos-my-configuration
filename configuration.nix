@@ -38,6 +38,8 @@
   # Enable networking
   # networking.networkmanager.enable = true;
 
+  programs.light.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 

@@ -15,30 +15,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  networking.wireless = {
-    enable = true;  # Enables wireless support via wpa_supplicant.
-    userControlled.enable = true;
-    networks = {
-      "CUMT_Stu" = {
-        auth = ''
-          key_mgmt=NONE
-          priority=0
-        '';
-      };
-      "OPPO Reno4 SE 5G" = {
-        psk = "gzfwsnyy1234";
-      };
-    };
-  };
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  # networking.networkmanager.enable = true;
-
-  programs.light.enable = true;
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
@@ -58,6 +42,16 @@
     LC_TIME = "zh_CN.UTF-8";
   };
 
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.waylandFrontend = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+      fcitx5-chinese-addons
+      fcitx5-nord
+    ];
+  };
 
   fonts.packages = with pkgs; [
     noto-fonts
@@ -77,13 +71,26 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable EXWM.
-  services.xserver.windowManager.exwm.enable = true;
+  # Enable the GNOME Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
-
-  # Enable TLP.
-  services.tlp.enable = true;
-
+  # Excluding GNOME default apps.
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-tour
+#    epiphany
+    gnome-connections
+    gnome-weather
+    gnome-contacts
+    gnome-maps
+    simple-scan
+    yelp
+    totem
+    gnome-music
+    gnome-calculator
+    geary
+    gnome-text-editor
+  ]);
 
   # Disable xterm.
   services.xserver.excludePackages = [ pkgs.xterm ];
@@ -146,6 +153,9 @@
   # Enable Zsh.
   programs.zsh.enable = true;
 
+  # Do not enable firefox in unstable channel. Can't compile.
+  # Install firefox.
+  # programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -159,7 +169,7 @@
     wget
     curl
 # use gnome-boxes for virtualisation. for win10 please refer: https://www.ctrl.blog/entry/how-to-win10-in-gnome-boxes.html
-    # gnome-boxes
+    gnome-boxes
   ]);
 
   # Some programs need SUID wrappers, can be configured further or are

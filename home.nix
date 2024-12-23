@@ -78,6 +78,9 @@ in
     my-agda
     my-python
     pyright
+    gcc
+    cmake
+    clang-tools
   ]) ++
   my-zsh-additional-pkgs;
 

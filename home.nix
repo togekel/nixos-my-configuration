@@ -82,6 +82,7 @@ in
     cmake
     gnumake
     clang-tools
+    cmake-language-server
   ]) ++
   my-zsh-additional-pkgs;
 

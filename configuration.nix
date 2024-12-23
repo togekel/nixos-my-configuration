@@ -78,7 +78,7 @@
   # Excluding GNOME default apps.
   environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
-#    epiphany
+    epiphany
     gnome-connections
     gnome-weather
     gnome-contacts
@@ -153,9 +153,6 @@
   # Enable Zsh.
   programs.zsh.enable = true;
 
-  # Do not enable firefox in unstable channel. Can't compile.
-  # Install firefox.
-  # programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

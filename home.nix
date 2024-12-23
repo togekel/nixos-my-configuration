@@ -72,9 +72,18 @@ in
   };
 
 
-
   # Install Apps.
   home.packages = (with pkgs; [
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    # libreoffice-fresh # libreoffice.
+    # hunspell # libreoffice.
+    # gnome.gnome-software # graphical flatpak.
+    xed-editor
+    whitesur-icon-theme # WhiteSur icon theme.
+    whitesur-cursors # WhiteSur Cursor theme.
+    whitesur-gtk-theme # WhiteSur Gtk theme.
+    gnome-tweaks # Tweaks to change looking.
     my-agda
     my-python
     pyright
@@ -83,8 +92,32 @@ in
     gnumake
     clang-tools
     cmake-language-server
-  ]) ++
+  ]) ++ (with pkgs.gnomeExtensions; [
+    kimpanel
+    # gsconnect
+    dash-to-dock
+    logo-menu
+    blur-my-shell
+  ]) ++ 
   my-zsh-additional-pkgs;
+
+  # Enable dconf.
+  dconf = {
+    enable = true;
+    settings."org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = (with pkgs.gnomeExtensions; [
+        blur-my-shell.extensionUuid
+        kimpanel.extensionUuid
+        dash-to-dock.extensionUuid
+        logo-menu.extensionUuid
+        applications-menu.extensionUuid
+        places-status-indicator.extensionUuid
+        user-themes.extensionUuid
+        system-monitor.extensionUuid
+      ]);
+    };
+  };
 
 
   # This value determines the Home Manager release that your

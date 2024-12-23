@@ -134,6 +134,12 @@ in
   programs.home-manager.enable = true;
 
 
+  home.file.".ssh" = {
+    recursive = true;
+    source = ./ssh;
+  };
+
+
   # Home Manager Activations.
   home.activation = {
     spacemacs-config = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

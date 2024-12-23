@@ -6,9 +6,9 @@ let
     starship
     thefuck
   ]);
-  my-agda = pkgs.agda.withPackages (p: [
-    p.standard-library
-  ]);
+  # my-agda = pkgs.agda.withPackages (p: [
+  #   p.standard-library
+  # ]);
   my-python = pkgs.python3.withPackages (p: [
     p.numpy
     p.pandas
@@ -84,7 +84,7 @@ in
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
     gnome-tweaks # Tweaks to change looking.
-    my-agda
+    # my-agda
     my-python
     pyright
     gcc

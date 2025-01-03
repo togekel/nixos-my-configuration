@@ -97,6 +97,7 @@ in
     dash-to-dock
     logo-menu
     blur-my-shell
+    window-title-is-back
   ]) ++ 
   my-zsh-additional-pkgs;
 
@@ -114,6 +115,7 @@ in
         places-status-indicator.extensionUuid
         user-themes.extensionUuid
         system-monitor.extensionUuid
+        window-title-is-back.extensionUuid
       ]);
     };
   };

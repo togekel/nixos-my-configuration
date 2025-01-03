@@ -46,7 +46,7 @@ in
       collect = "sudo nix-store --gc";
       refresh = "sudo nix-collect-garbage -d";
       optimise = "sudo nix-store --optimise";
-      update = "nix flake update";
+      update = "git clone git@github.com:togekel/nixos-my-configuration /tmp/nixos-myconfiguration && cd /tmp/nixos-my-configuration && nix flake update --flake . && cd && rm -rf /tmp/nixos-my-configuration";
     };
     history = {
       size = 10000;

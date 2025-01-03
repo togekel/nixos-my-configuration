@@ -42,11 +42,11 @@ in
 
     shellAliases = {
       ll = "ls -l";
-      update = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch";
+      rebuild = "sudo nixos-rebuild switch --flake github:togekel/nixos-my-configuration#nixos";
       collect = "sudo nix-store --gc";
       refresh = "sudo nix-collect-garbage -d";
       optimise = "sudo nix-store --optimise";
-      rebuild = "sudo nixos-rebuild switch";
+      update = "nix flake update";
     };
     history = {
       size = 10000;

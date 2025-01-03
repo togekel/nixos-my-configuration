@@ -55,7 +55,7 @@ This function should only modify configuration layer settings."
      version-control
      treemacs
      nixos
-     agda
+     ;; agda
      c-c++
      cscope
      (cmake :variables cmake-enable-cmake-ide-support t)

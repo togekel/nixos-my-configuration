@@ -139,11 +139,6 @@ in
   };
 
 
-  home.file.".spacemacs" = {
-    source = ./spacemacs;
-  };
-
-
   # Home Manager Activations.
   home.activation = {
     spacemacs-config = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

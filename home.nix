@@ -154,7 +154,7 @@ in
   in {
     spacemacs-config = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       if [[ ! -d "$HOME/.emacs.d" && ! -e "$HOME/.spacemacs" ]] ; then
-        run $git clone https://github.com/syl20bnr/spacemacs.git $HOME/.emacs.d
+        run ${git} clone https://github.com/syl20bnr/spacemacs.git $HOME/.emacs.d
       fi
     '';
   };

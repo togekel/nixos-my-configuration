@@ -100,6 +100,7 @@ in
     gnumake
     clang-tools
     cmake-language-server
+    kdePackages.kdevelop
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     # gsconnect

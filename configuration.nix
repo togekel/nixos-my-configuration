@@ -102,6 +102,7 @@
   services.flatpak.enable = true;
   # Don't forget to add Flathub repo:
   # $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  # $ sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
   
   # Abandon virtualbox due to recompilation per update.
   # Enable Virtualbox.

@@ -89,7 +89,7 @@
     gnome-music
     gnome-calculator
     geary
-    gnome-text-editor
+    # gnome-text-editor
   ]);
 
   # Disable xterm.

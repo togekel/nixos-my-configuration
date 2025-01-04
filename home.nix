@@ -22,10 +22,10 @@ in
   home.homeDirectory = "/home/feng";
   
   # Install Firefox.
-  programs.firefox = {
-    enable = true;
-    package = pkgs.firefox-bin;
-  };
+#  programs.firefox = {
+#    enable = true;
+#    package = pkgs.firefox-bin;
+#  };
 
   # Install and config git.
   programs.git = {
@@ -86,8 +86,8 @@ in
     #  wget
     # libreoffice-fresh # libreoffice.
     # hunspell # libreoffice.
-    # gnome.gnome-software # graphical flatpak.
-    xed-editor
+    gnome-software # graphical flatpak.
+#    xed-editor
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
@@ -100,7 +100,7 @@ in
     gnumake
     clang-tools
     cmake-language-server
-    kdePackages.kdevelop
+    gnome-builder
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     # gsconnect

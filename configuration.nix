@@ -78,7 +78,7 @@
   # Excluding GNOME default apps.
   environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
-    epiphany
+#    epiphany  # I prefer gnome buitin apps for my work :)
     gnome-connections
     gnome-weather
     gnome-contacts
@@ -99,7 +99,7 @@
   documentation.nixos.enable = false;
 
   # Enable flatpak.
-  # services.flatpak.enable = true;
+  services.flatpak.enable = true;
   # Don't forget to add Flathub repo:
   # $ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   

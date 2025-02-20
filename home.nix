@@ -128,7 +128,7 @@ in
   };
 
   # Activation scripts.
-  #home.activation = let
+  home.activation = let
     flatpak = pkgs.flatpak;
   in
   {

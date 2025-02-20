@@ -78,7 +78,7 @@ in
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
     gnome-tweaks # Tweaks to change looking.
-    my-python
+    #my-python
     evolution # Email Client.
     wpsoffice-cn
   ]) ++ (with pkgs.gnomeExtensions; [
@@ -133,8 +133,8 @@ in
   in
   {
     changeFlatpakMirror = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      run $flatpak/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-      run $flatpak/bin/flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+      run ${flatpak}/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      run ${flatpak}/bin/flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
     '';
   };
 }

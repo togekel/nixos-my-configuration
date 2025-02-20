@@ -138,6 +138,13 @@ in
     recursive = true;
     source = ./ssh;
   };
+  
+  home.file.".bigsur.jpg" = {
+    source = Builtins.fetchurl {
+      url = "https://images.hdqwalls.com/wallpapers/big-sur-apple-5k-78.jpg";
+      hash = "";
+    };
+  }
 
   # Activation scripts.
   home.activation = let

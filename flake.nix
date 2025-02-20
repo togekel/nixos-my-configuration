@@ -2,9 +2,9 @@
   description = "My NixOS flake.";
   
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/master";
+    nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -106,11 +106,11 @@
   documentation.nixos.enable = false;
   
   # Enable Virtualbox.
-  # virtualisation.virtualbox.host.enable = true;
-  # users.extraGroups.vboxusers.members =  [ "feng" ];
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-  # virtualisation.virtualbox.guest.enable = true;
-  # virtualisation.virtualbox.guest.dragAndDrop = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members =  [ "feng" ];
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.dragAndDrop = true;
 
 
   # Configure keymap in X11

@@ -72,7 +72,8 @@ in
 
   # Install Apps.
   home.packages = (with pkgs; [
-  #  gnome-software # graphical flatpak.
+    flatpak # flatpak
+    gnome-software # graphical flatpak.
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
@@ -82,6 +83,9 @@ in
     cmake
     gnumake
     evolution # Email Client.
+    qq
+    wechat-uos
+    wpsoffice-cn
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock
@@ -127,4 +131,12 @@ in
     recursive = true;
     source = ./ssh;
   };
+
+  # Activation scripts.
+  home.activation = {
+    changeFlatpakMirror = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      run flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      run flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+    '';
+  }
 }

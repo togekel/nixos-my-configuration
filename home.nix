@@ -143,5 +143,5 @@ in
       url = "https://images.hdqwalls.com/wallpapers/big-sur-apple-5k-78.jpg";
       hash = "";
     };
-  }
+  };
 }

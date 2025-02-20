@@ -91,6 +91,8 @@ in
     gnome-tweaks # Tweaks to change looking.
     my-python
     evolution # Email Client.
+    qq
+    wechat-uos
     wpsoffice-cn
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel

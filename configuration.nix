@@ -95,7 +95,7 @@
     totem
     gnome-music
     gnome-calculator
-  #  geary
+    geary
   #  gnome-text-editor
   ]);
 

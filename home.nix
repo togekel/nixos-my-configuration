@@ -81,6 +81,7 @@ in
     gcc
     cmake
     gnumake
+    evolution # Email Client.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

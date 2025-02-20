@@ -39,7 +39,7 @@ in
 
     shellAliases = {
       ll = "ls -l";
-      rebuild = "sudo nixos-rebuild switch --flake github:togekel/nixos-my-configuration#nixos --impure";
+      rebuild = "sudo nixos-rebuild switch --flake github:togekel/nixos-my-configuration#nixos";
       collect = "sudo nix-store --gc";
       refresh = "sudo nix-collect-garbage -d";
       optimise = "sudo nix-store --optimise";

@@ -85,7 +85,6 @@ in
 
   # Install Apps.
   home.packages = (with pkgs; [
-    gnome-software # graphical flatpak.
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.

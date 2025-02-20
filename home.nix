@@ -133,10 +133,13 @@ in
   };
 
   # Activation scripts.
-  home.activation = {
+  home.activation = let
+    flatpak = pkgs.flatpak;
+  in
+  {
     changeFlatpakMirror = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      run flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-      run flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+      run ${flatpak} remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      run ${flatpak} remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
     '';
   };
 }

@@ -64,7 +64,7 @@
     wqy_zenhei
     meslo-lg
     mononoki
-    # nerdfonts
+    nerdfonts
   ];
 
 

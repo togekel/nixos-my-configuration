@@ -129,12 +129,12 @@ in
 
   # Activation scripts.
   #home.activation = let
-  #  flatpak = pkgs.flatpak;
-  #in
-  #{
-  #  changeFlatpakMirror = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-  #    run ${flatpak}/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  #    run ${flatpak}/bin/flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
-  #  '';
-  #};
+    flatpak = pkgs.flatpak;
+  in
+  {
+    changeFlatpakMirror = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      run ${flatpak}/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      run ${flatpak}/bin/flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+    '';
+  };
 }

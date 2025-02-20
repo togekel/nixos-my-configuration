@@ -174,6 +174,7 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   
+  # Enable flatpak.
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
@@ -183,6 +184,11 @@
       flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
     '';
   };
+  
+  # Enable power management.
+  powerManagement.enable = true;
+  services.thermald.enable = true;
+  services.tlp.enable = true;
 
   # set tsinghua mirror and avoid cache.nixos.org
   nix.settings.substituters = lib.mkForce [ 

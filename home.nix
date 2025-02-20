@@ -142,7 +142,7 @@ in
   home.file.".bigsur.jpg" = {
     source = builtins.fetchurl {
       url = "https://images.hdqwalls.com/wallpapers/big-sur-apple-5k-78.jpg";
-      sha256 = "";
+      sha256 = "1vj0i17izsgig124d47qwhjjhih4ma6k9gvkfh3qnz7qhkvyzp5z";
     };
   };
 }

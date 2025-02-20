@@ -65,6 +65,7 @@ in
         cd ..
         rm -rf nixos-my-configuration
       '';
+      open = "xdg-open";
     };
     history = {
       size = 10000;

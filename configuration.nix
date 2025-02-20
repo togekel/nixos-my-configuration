@@ -188,7 +188,6 @@
   # Enable power management.
   powerManagement.enable = true;
   services.thermald.enable = true;
-  services.tlp.enable = true;
 
   # set tsinghua mirror and avoid cache.nixos.org
   nix.settings.substituters = lib.mkForce [ 

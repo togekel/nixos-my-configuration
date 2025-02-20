@@ -94,7 +94,7 @@ in
     qq
     wechat-uos
     wpsoffice-cn
-    jetbrains.clion # CLion for C Dev.
+    # jetbrains.clion # CLion for C Dev.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

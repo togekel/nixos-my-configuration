@@ -64,8 +64,7 @@
     wqy_zenhei
     meslo-lg
     mononoki
-    nerdfonts
-  ];
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
 
   # console = {

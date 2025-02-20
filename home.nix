@@ -53,6 +53,18 @@ in
         cd
         rm -rf /tmp/nixos-my-configuration
       '';
+      gte = "gnome-text-editor";
+      modify = ''
+        git clone git@github.com:togekel/nixos-my-configuration
+        cd nixos-my-configuration
+      '';
+      commit = ''
+        git add .
+        git commit -m "update"
+        git push origin main
+        cd ..
+        rm -rf nixos-my-configuration
+      '';
     };
     history = {
       size = 10000;

@@ -6,9 +6,6 @@ let
     starship
     thefuck
   ]);
-  # my-agda = pkgs.agda.withPackages (p: [
-  #   p.standard-library
-  # ]);
   my-python = pkgs.python3.withPackages (p: [
     p.numpy
     p.pandas
@@ -22,10 +19,10 @@ in
   home.homeDirectory = "/home/feng";
   
   # Install Firefox.
-#  programs.firefox = {
-#    enable = true;
-#    package = pkgs.firefox-bin;
-#  };
+  programs.firefox = {
+    enable = true;
+    package = pkgs.firefox-bin;
+  };
 
   # Install and config git.
   programs.git = {
@@ -73,36 +70,19 @@ in
   # Enable StarShip.
   programs.starship.enable = true;
 
-  # Enable Emacs.
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacs;
-  };
-
-
   # Install Apps.
   home.packages = (with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-    # libreoffice-fresh # libreoffice.
-    # hunspell # libreoffice.
-    gnome-software # graphical flatpak.
-#    xed-editor
+  #  gnome-software # graphical flatpak.
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
     gnome-tweaks # Tweaks to change looking.
-    # my-agda
     my-python
-    pyright
     gcc
     cmake
     gnumake
-    clang-tools
-    cmake-language-server
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
-    # gsconnect
     dash-to-dock
     logo-menu
     blur-my-shell
@@ -145,17 +125,5 @@ in
   home.file.".ssh" = {
     recursive = true;
     source = ./ssh;
-  };
-
-
-  # Home Manager Activations.
-  home.activation = let
-    git = pkgs.git;
-  in {
-    spacemacs-config = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      if [[ ! -d "$HOME/.emacs.d" && ! -e "$HOME/.spacemacs" ]] ; then
-        run ${git}/bin/git clone https://github.com/syl20bnr/spacemacs.git $HOME/.emacs.d
-      fi
-    '';
   };
 }

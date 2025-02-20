@@ -138,5 +138,5 @@ in
       run flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
       run flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
     '';
-  }
+  };
 }

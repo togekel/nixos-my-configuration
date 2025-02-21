@@ -93,7 +93,7 @@ in
     evolution # Email Client.
     qq
     wechat-uos
-    wpsoffice-cn
+    # wpsoffice-cn # This version is old. Use Nur.
     # jetbrains.clion # CLion for C Dev.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel

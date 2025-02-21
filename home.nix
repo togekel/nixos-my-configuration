@@ -13,7 +13,7 @@ let
   ]);
   nur = import (builtins.fetchTarball {
     url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-    sha256 = "";
+    sha256 = "07cpf1rnq58il6nffnx4yafdly8if6ykxy8bylgnhl5pr80509la";
   }) {};
 in
 {

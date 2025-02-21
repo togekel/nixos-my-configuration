@@ -11,7 +11,10 @@ let
     p.pandas
     p.matplotlib
   ]);
-  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {};
+  nur = import (builtins.fetchTarball {
+    url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+    sha256 = "";
+  }) {};
 in
 {
   # Home Manager needs a bit of information about you and the

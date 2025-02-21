@@ -88,6 +88,9 @@ in
   programs.starship.enable = true;
 
   # Install Apps.
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "wemeet-bin-bwrap"
+  ];
   home.packages = (with pkgs; [
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.

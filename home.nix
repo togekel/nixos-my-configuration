@@ -100,6 +100,7 @@ in
     dash-to-dock
     logo-menu
     blur-my-shell
+    appindicator
   ]) ++ 
   my-zsh-additional-pkgs;
 

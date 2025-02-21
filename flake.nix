@@ -3,18 +3,13 @@
   
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
-    nixpkgs.config.allowUnfree = true;
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   
-  outputs = { self, nixpkgs, home-manager, nur, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

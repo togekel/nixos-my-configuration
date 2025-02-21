@@ -1,4 +1,4 @@
-{ lib, config, pkgs, nur, ... }:
+{ lib, config, pkgs, ... }:
 let
   my-zsh-additional-pkgs = (with pkgs; [
     zsh
@@ -11,6 +11,7 @@ let
     p.pandas
     p.matplotlib
   ]);
+  nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {};
 in
 {
   # Home Manager needs a bit of information about you and the

@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, nur, ... }:
 let
   my-zsh-additional-pkgs = (with pkgs; [
     zsh
@@ -11,10 +11,10 @@ let
     p.pandas
     p.matplotlib
   ]);
-  nur = import (builtins.fetchTarball {
-    url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-    sha256 = "07cpf1rnq58il6nffnx4yafdly8if6ykxy8bylgnhl5pr80509la";
-  }) {};
+  #nur = import (builtins.fetchTarball {
+  #  url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+  #  sha256 = "07cpf1rnq58il6nffnx4yafdly8if6ykxy8bylgnhl5pr80509la";
+  #}) {};
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -88,7 +88,6 @@ in
   programs.starship.enable = true;
 
   # Install Apps.
-  nixpkgs.config.allowUnfree = true;
   home.packages = (with pkgs; [
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.

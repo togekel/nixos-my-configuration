@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, nur, ... }:
 let
   my-zsh-additional-pkgs = (with pkgs; [
     zsh

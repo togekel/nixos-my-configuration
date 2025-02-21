@@ -101,9 +101,6 @@ in
     logo-menu
     blur-my-shell
     appindicator
-  ]) ++ (with nur.repos; [
-    novel2430.wemeet-bin-bwrap-wayland-screenshare
-    novel2430.wpsoffice-cn
   ]) ++ 
   my-zsh-additional-pkgs;
 

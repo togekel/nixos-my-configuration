@@ -118,6 +118,8 @@ in
         places-status-indicator.extensionUuid
         user-themes.extensionUuid
         system-monitor.extensionUuid
+        appindicator.extensionUuid
+        light-style.extensionUuid
       ]);
     };
   };

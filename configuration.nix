@@ -150,6 +150,16 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  
+  # Allow nur
+  nixpkgs.config.packageOverrides = pkgs: {
+    nur = import (builtins.fetchTarball {
+      url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+      sha256 = "1dvyykxnzbh30g9bm6saal9ylyxsbbkb1qmm587vvmy165lcavnv";
+    }) {
+      inherit pkgs;
+    };
+  };
 
 
   # List packages installed in system profile. To search, run:

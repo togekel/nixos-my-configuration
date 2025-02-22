@@ -12,6 +12,9 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  
+  # Due to bug in latest virtualbox pkg, disable kvm-load.
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/07d434e3-1e31-4fdd-980e-90bde0bdf7af";

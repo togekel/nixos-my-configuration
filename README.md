@@ -36,4 +36,5 @@
 - optimise: optimise storage by hard-linking.
 - gte: `gnome-text-editor`
 ## Notice
+- Don't directly use this flake! You need replace hardware-configuration.nix into your own and edit user info in configuration.nix.
 - To launch console in logo menu, the shortcut should be changed into kgx (cmd of console).

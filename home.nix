@@ -94,7 +94,7 @@ in
     qq
     wechat-uos
     # wpsoffice-cn # This version is old. Use Nur.
-    # jetbrains.clion # CLion for C Dev.
+    jetbrains.clion # CLion for C Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn
   ]) ++ (with pkgs.gnomeExtensions; [

@@ -96,13 +96,7 @@ in
     # wpsoffice-cn # This version is old. Use Nur.
     # jetbrains.clion # CLion for C Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
-    nur.repos.novel2430.wpsoffice-cn.overrideAttrs (finalAttrs: previousAttrs: {
-      shellHook = ''
-        export GTK_IM_MODULE=fcitx
-        export QT_IM_MODULE=fcitx5
-        export XMODIFIERS=@im=fcitx
-      '';
-    })  
+    nur.repos.novel2430.wpsoffice-cn
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

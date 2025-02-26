@@ -11,6 +11,12 @@ let
     p.pandas
     p.matplotlib
   ]);
+  dev-tools = (with pkgs; [
+    gcc
+    g++
+    gnumake
+    cmake
+  ]);
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -97,6 +103,7 @@ in
     jetbrains.clion # CLion for C Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     # nur.repos.novel2430.wpsoffice-cn # fcitx5 cannot input.
+    dev-tools # tools for c dev.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

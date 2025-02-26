@@ -13,7 +13,6 @@ let
   ]);
   dev-tools = (with pkgs; [
     gcc
-    g++
     gnumake
     cmake
   ]);

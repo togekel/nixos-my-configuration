@@ -115,20 +115,54 @@ in
   # Enable dconf.
   dconf = {
     enable = true;
-    settings."org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = (with pkgs.gnomeExtensions; [
-        blur-my-shell.extensionUuid
-        kimpanel.extensionUuid
-        dash-to-dock.extensionUuid
-        logo-menu.extensionUuid
-        applications-menu.extensionUuid
-        places-status-indicator.extensionUuid
-        user-themes.extensionUuid
-        system-monitor.extensionUuid
-        appindicator.extensionUuid
-        light-style.extensionUuid
-      ]);
+    settings = {
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enabled-extensions = (with pkgs.gnomeExtensions; [
+          blur-my-shell.extensionUuid
+          kimpanel.extensionUuid
+          dash-to-dock.extensionUuid
+          logo-menu.extensionUuid
+          applications-menu.extensionUuid
+          places-status-indicator.extensionUuid
+          user-themes.extensionUuid
+          system-monitor.extensionUuid
+          appindicator.extensionUuid
+          light-style.extensionUuid
+        ]);
+      };
+      "org/gnome/Console" = {
+        custom-font = "MesloLGM Nerd Font 13";
+        theme = "auto";
+        use-system-font = false;
+      };
+      "org/gnome/TextEditor" = {
+        custom-font = "Mononoki Nerd Font 13";
+        use-system-font = false;
+      };
+      "org/gnome/desktop/background" = {
+        picture-uri = "file:///home/feng/.bigsur.jpg";
+        picture-uri-dark = "file:///home/feng/.bigsur.jpg";
+      };
+      "org/gnome/desktop/interface" = {
+        cursor-theme = "WhiteSur-cursors";
+        gtk-theme = "WhiteSur-Light";
+        icon-theme = "WhiteSur";
+      };
+      "org/gnome/shell/extensions/Logo-menu" = {
+        menu-button-icon-image = 23;
+        menu-button-terminal = "kgx";
+        symbolic-icon = true;
+        use-custom-icon = false;
+      };
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        apply-custom-theme = true;
+        custom-theme-shrink = true;
+        show-show-apps-button = false;
+      };
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "WhiteSur-Light";
+      };
     };
   };
 

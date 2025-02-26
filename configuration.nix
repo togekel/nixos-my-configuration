@@ -190,7 +190,7 @@
     wantedBy = [ "multi-user.target" ];
     path = [ pkgs.flatpak ];
     script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
       flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
     '';
   };
@@ -200,10 +200,10 @@
   services.thermald.enable = true;
 
   # set tsinghua mirror and avoid cache.nixos.org
-  nix.settings.substituters = lib.mkForce [ 
-    "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-    "https://mirrors.ustc.edu.cn/nix-channels/store"
-  ];
+  #nix.settings.substituters = lib.mkForce [ 
+  #  "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+  #  "https://mirrors.ustc.edu.cn/nix-channels/store"
+  #];
   
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

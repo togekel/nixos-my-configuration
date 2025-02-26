@@ -8,27 +8,26 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  
-  # Due to bug in latest virtualbox pkg, disable kvm-load.
-  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/07d434e3-1e31-4fdd-980e-90bde0bdf7af";
+    { device = "/dev/disk/by-uuid/ee593552-aea7-4e61-9b7a-19a68afb6af1";
       fsType = "ext4";
     };
 
+  boot.initrd.luks.devices."luks-fab04f03-25be-4173-a131-d80dd940e127".device = "/dev/disk/by-uuid/fab04f03-25be-4173-a131-d80dd940e127";
+
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/59EB-8E6D";
+    { device = "/dev/disk/by-uuid/28C7-8B1D";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/30bc214c-750b-49e0-91f1-4cdaa314468d"; }
+    [ { device = "/dev/disk/by-uuid/6e1eca30-ea59-49fe-b83c-001d517d19da"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

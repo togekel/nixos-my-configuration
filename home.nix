@@ -166,6 +166,8 @@ in
         cursor-theme = "WhiteSur-cursors";
         gtk-theme = "WhiteSur-Light";
         icon-theme = "WhiteSur";
+        document-font-name = "Mononoki Nerd Font 11";
+        monospace-font-name = "Mononoki Nerd Font Mono 10";
       };
       "org/gnome/shell/extensions/Logo-menu" = {
         menu-button-icon-image = 23;
@@ -186,6 +188,19 @@ in
       };
       "org/gnome/settings-daemon/plugins/power" = {
         sleep-inactive-ac-type = "nothing";
+      };
+      "org/gnome/settings-daemon/plugins/color" = {
+        night-light-enabled = true;
+        night-light-schedule-automatic = false;
+        night-light-schedule-from = 18.0;
+      };
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" ];
+      };
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+        binding = "<Super>t";
+        command = "kgx";
+        name = "Launch Terminal";
       };
     };
   };

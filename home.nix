@@ -163,6 +163,12 @@ in
       "org/gnome/shell/extensions/user-theme" = {
         name = "WhiteSur-Light";
       };
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = "close,maximize,minimize:appmenu";
+      };
+      "org/gnome/settings-daemon/plugins/power" = {
+        sleep-inactive-ac-type = "nothing";
+      };
     };
   };
 

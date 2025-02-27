@@ -111,6 +111,24 @@ in
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
+  
+  # Set GTK Theme.
+  home.sessionVariables.GTK_THEME = "WhiteSur-Light";
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "WhiteSur";
+      package = pkgs.whitesur-icon-theme;
+    };
+    theme = {
+      name = "WhiteSur-Light";
+      package = pkgs.whitesur-gtk-theme;
+    };
+    cursorTheme = {
+      name = "WhiteSur-cursors";
+      package = pkgs.whitesur-cursors;
+    };
+  };
 
   # Enable dconf.
   dconf = {

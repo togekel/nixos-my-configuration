@@ -16,12 +16,12 @@ let
     gnumake
     cmake
   ]);
-  jetbrains-clion = pkgs.jetbrains.clion.override {
+  jetbrains-clion = pkgs.jetbrains.clion.overrideAttrs (finalAttrs: previousAttrs: {
     fromSource = true;
-  };
-  jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.override {
+  });
+  jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
     fromSource = true;
-  };
+  });
 in
 {
   # Home Manager needs a bit of information about you and the

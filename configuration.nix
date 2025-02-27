@@ -169,6 +169,7 @@
     wget
     curl
     gnome-software # graphical flatpak. Do not install under homemanager. It wouldn't work.
+    gnome-settings-daemon # udev rule.
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -184,8 +185,6 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   
-  # Enable udev rules.
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   
   # Enable flatpak.
   services.flatpak.enable = true;

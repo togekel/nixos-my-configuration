@@ -184,6 +184,9 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   
+  # Enable udev rules.
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  
   # Enable flatpak.
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {

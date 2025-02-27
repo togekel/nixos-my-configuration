@@ -164,7 +164,7 @@ in
         name = "WhiteSur-Light";
       };
       "org/gnome/desktop/wm/preferences" = {
-        button-layout = "close,maximize,minimize:appmenu";
+        button-layout = "close,minimize,maximize:appmenu";
       };
       "org/gnome/settings-daemon/plugins/power" = {
         sleep-inactive-ac-type = "nothing";

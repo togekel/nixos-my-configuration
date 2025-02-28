@@ -163,7 +163,7 @@
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball {
       url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-      sha256 = "090wwxnv2cq55hhrsmj7h1c6vcb145cpxsfra3bvw7p0yc9489lx";
+      sha256 = "015vanjby0ayd8k8s6hvnv08hpkn7wixg69yyqrajha5pa3wk24k";
     }) {
       inherit pkgs;
     };

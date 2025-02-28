@@ -1,5 +1,5 @@
 # NixOS Configuration for 24.11 with flakes
-![MacOS-like Theme](https://github.com/user-attachments/assets/ad94e3ad-0bbd-42cd-9744-e589b647adf8)
+![MacOS-like theme](https://github.com/user-attachments/assets/598087fc-5cec-409d-87d0-547d46db7407)
 ## Fetures
 - [x] support for Nix Flakes.
 - [x] support for Nur.

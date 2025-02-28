@@ -107,8 +107,8 @@ in
     qq
     wechat-uos
     # wpsoffice-cn # This version is old. Use Nur.
-    (pkgs.jetbrains.plugins.addPlugins jetbrains-clion ["github-copilot"]) # CLion for C Dev.
-    (pkgs.jetbrains.plugins.addPlugins jetbrains-pycharm ["github-copilot"]) # PyCharm for Python Dev.
+    jetbrains-clion # CLion for C Dev.
+    jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     # nur.repos.novel2430.wpsoffice-cn # fcitx5 cannot input.
   ]) ++ (with pkgs.gnomeExtensions; [

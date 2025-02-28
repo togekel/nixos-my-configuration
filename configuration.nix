@@ -166,9 +166,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    openssl
-    krb5
-    nghttp2
     wget
     curl
     gnome-software # graphical flatpak. Do not install under homemanager. It wouldn't work.

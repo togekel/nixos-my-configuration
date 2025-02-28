@@ -14,7 +14,7 @@
 - [x] qq.
 - [x] wechat.
 - [x] wemeet-wayland-screenshare(nur).
-- [x] wpsoffice-cn(nur).
+- [x] wpsoffice-cn (nur, not selected due to input issue with fcitx5).
 - [x] preset github ssh key (personal use).
 - [x] python pkgs (numpy,pandas,matplotlib).
 - [x] macos-like gtk theme (installed and selected by default).

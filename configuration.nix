@@ -166,6 +166,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    openssl
+    krb5
+    nghttp2
     wget
     curl
     gnome-software # graphical flatpak. Do not install under homemanager. It wouldn't work.
@@ -174,16 +177,16 @@
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  Enable the OpenSSH daemon.
+  services.openssh.enable = true;
   
   
   # Enable flatpak.

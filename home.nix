@@ -77,6 +77,7 @@ in
         rm -rf nixos-my-configuration
       '';
       open = "xdg-open";
+      prefetch-nur = "nix-prefetch-url --unpack https://github.com/nix-community/NUR/archive/master.tar.gz";
     };
     history = {
       size = 10000;
@@ -115,7 +116,7 @@ in
     logo-menu
     blur-my-shell
     appindicator # systray
-    tiling-shell # tiling windows in different styles, not enabled by default.
+    tiling-shell
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
@@ -155,7 +156,7 @@ in
           system-monitor.extensionUuid
           appindicator.extensionUuid
           light-style.extensionUuid
-          # tiling-shell # Not enabled by default.
+          tiling-shell.extensionUuid
         ]);
       };
       "org/gnome/Console" = {
@@ -210,6 +211,14 @@ in
         binding = "<Super>t";
         command = "kgx";
         name = "Launch Terminal";
+      };
+      "org/gnome/shell/extensions/tilingshell" = {
+        enable-autotiling = true;
+        enable-blur-selected-tilepreview = true;
+        enable-blur-snap-assistant = true;
+        enable-screen-edges-windows-suggestions = true;
+        enable-tiling-system-windows-suggestions = true;
+        top-edge-maximize = true;
       };
     };
   };

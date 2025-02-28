@@ -159,7 +159,7 @@ in
           appindicator.extensionUuid
           light-style.extensionUuid
           tiling-shell.extensionUuid
-          new-mail-indicator
+          new-mail-indicator.extensionUuid
         ]);
       };
       "org/gnome/Console" = {

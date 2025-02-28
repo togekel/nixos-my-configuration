@@ -24,7 +24,7 @@
 - [x] system monitor on top.
 - [x] systray (need by qq, wechat).
 - [x] blur-shell.
-- [x] dash-to-dock (need adjust by hand).
+- [x] dash-to-dock.
 - [x] dconf settings.
 - [x] tiling shell (selected).
 - [x] evolution with message notify (gnome extension new-mail-indicator selected).
@@ -43,4 +43,5 @@
 - three-re: `refresh && rebuild && reboot`
 ## Notice
 - Don't directly use this flake! You need replace hardware-configuration.nix into your own and edit user info in configuration.nix.
+- You may change sha256 of nur source by hand. `prefetch-nur` sometimes gets wrong sha256 newer than actual.
 - To launch console in logo menu, the shortcut is changed into `kgx` (cmd of console).

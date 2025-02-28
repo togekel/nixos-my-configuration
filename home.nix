@@ -96,13 +96,6 @@ in
   # Enable StarShip.
   programs.starship.enable = true;
   
-  # Enable Evolution.
-  programs.evolution = {
-    enable = true;
-    plugins = [ pkgs.evolution-ews ];
-  };
-  services.gnome.evolution-data-server.enable = true;
-  
 
   # Install Apps.
   home.packages = (with pkgs; [

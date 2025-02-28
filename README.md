@@ -17,14 +17,15 @@
 - [x] wpsoffice-cn(nur).
 - [x] preset github ssh key (personal use).
 - [x] python pkgs (numpy,pandas,matplotlib).
-- [x] macos-like gtk theme (installed but need to be selected by hand through gnome-tweaks).
-- [x] bigsur hd background (~/.bigsur.jpg).
+- [x] macos-like gtk theme (installed and selected by default).
+- [x] bigsur hd background (~/.bigsur.jpg, auto selected).
 - [x] app menu.
-- [x] logo menu.
+- [x] logo menu (the shortcut of terminal is changed by default).
 - [x] system monitor on top.
 - [x] systray (need by qq, wechat).
 - [x] blur-shell.
 - [x] dash-to-dock (need adjust by hand).
+- [x] dconf settings.
 ## Useful Shell Alias
 - ll: `ls -l`
 - modify: fetch configuration repo from github and cd
@@ -37,4 +38,4 @@
 - gte: `gnome-text-editor`
 ## Notice
 - Don't directly use this flake! You need replace hardware-configuration.nix into your own and edit user info in configuration.nix.
-- To launch console in logo menu, the shortcut should be changed into kgx (cmd of console).
+- To launch console in logo menu, the shortcut is changed into `kgx` (cmd of console).

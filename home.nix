@@ -115,6 +115,7 @@ in
     logo-menu
     blur-my-shell
     appindicator # systray
+    tiling-shell # tiling windows in different styles, not enabled by default.
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
@@ -154,6 +155,7 @@ in
           system-monitor.extensionUuid
           appindicator.extensionUuid
           light-style.extensionUuid
+          # tiling-shell # Not enabled by default.
         ]);
       };
       "org/gnome/Console" = {

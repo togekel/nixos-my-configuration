@@ -78,7 +78,7 @@ in
       '';
       open = "xdg-open";
       prefetch-nur = "nix-prefetch-url --unpack https://github.com/nix-community/NUR/archive/master.tar.gz";
-      3re = "refresh && rebuild && reboot";
+      three-re = "refresh && rebuild && reboot";
     };
     history = {
       size = 10000;

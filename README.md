@@ -36,6 +36,8 @@
 - rebuild: nixos-rebuild using remote flake.
 - optimise: optimise storage by hard-linking.
 - gte: `gnome-text-editor`
+- prefetch-nru: get nur sha256.
+- three-re: `refresh && rebuild && reboot`
 ## Notice
 - Don't directly use this flake! You need replace hardware-configuration.nix into your own and edit user info in configuration.nix.
 - To launch console in logo menu, the shortcut is changed into `kgx` (cmd of console).

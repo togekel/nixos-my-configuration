@@ -117,7 +117,8 @@ in
     logo-menu
     blur-my-shell
     appindicator # systray
-    tiling-shell
+    tiling-shell # tiling-shell
+    new-mail-indicator # New mail notification
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
@@ -158,6 +159,7 @@ in
           appindicator.extensionUuid
           light-style.extensionUuid
           tiling-shell.extensionUuid
+          new-mail-indicator
         ]);
       };
       "org/gnome/Console" = {

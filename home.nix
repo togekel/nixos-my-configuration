@@ -154,7 +154,7 @@ in
           applications-menu.extensionUuid
           places-status-indicator.extensionUuid
           user-themes.extensionUuid
-          system-monitor.extensionUuid
+          # system-monitor.extensionUuid # Useless
           appindicator.extensionUuid
           light-style.extensionUuid
           tiling-shell.extensionUuid

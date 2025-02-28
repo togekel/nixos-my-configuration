@@ -26,6 +26,7 @@
 - [x] blur-shell.
 - [x] dash-to-dock (need adjust by hand).
 - [x] dconf settings.
+- [x] tiling shell (selected).
 ## Useful Shell Alias
 - ll: `ls -l`
 - modify: fetch configuration repo from github and cd

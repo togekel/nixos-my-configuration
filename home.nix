@@ -112,6 +112,7 @@ in
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     # nur.repos.novel2430.wpsoffice-cn # fcitx5 cannot input.
     zotero
+    planner
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

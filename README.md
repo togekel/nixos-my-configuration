@@ -29,6 +29,9 @@
 - [x] tiling shell (selected).
 - [x] evolution with message notify (gnome extension new-mail-indicator selected).
 - [x] C/C++ and Python IDE (Clion, Pycharm both fromSource). 
+- [x] gnome-planner (for WBS).
+- [x] super-productivity (for TODO).
+- [x] LaTeX support (TeXLiveFull, texstudio).
 ## Useful Shell Alias
 - ll: `ls -l`
 - modify: fetch configuration repo from github and cd
@@ -45,3 +48,4 @@
 - Don't directly use this flake! You need replace hardware-configuration.nix into your own and edit user info in configuration.nix.
 - You may change sha256 of nur source by hand. `prefetch-nur` sometimes gets wrong sha256 newer than actual.
 - To launch console in logo menu, the shortcut is changed into `kgx` (cmd of console).
+- When tiling-shell enabled, adjusting gnome-text-editor by Ctrl+mouse may cause font resizing if you scroll on it. Type Ctrl again to avoid.

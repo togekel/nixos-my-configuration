@@ -112,7 +112,14 @@ in
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
     zotero
-    planner
+    planner # wbs
+    super-productivity # todo app
+    gimp # image processing
+    vlc # video player
+    amberol # music player
+    blanket # focus listening
+    texliveFull # LaTeX
+    texstudio # LaTeX IDE
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

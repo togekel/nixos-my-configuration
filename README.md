@@ -27,6 +27,8 @@
 - [x] dash-to-dock (need adjust by hand).
 - [x] dconf settings.
 - [x] tiling shell (selected).
+- [x] evolution with message notify (gnome extension new-mail-indicator selected).
+- [x] C/C++ and Python IDE (Clion, Pycharm both fromSource). 
 ## Useful Shell Alias
 - ll: `ls -l`
 - modify: fetch configuration repo from github and cd

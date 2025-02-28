@@ -39,6 +39,14 @@
     LC_TELEPHONE = "zh_CN.UTF-8";
     LC_TIME = "zh_CN.UTF-8";
   };
+  
+  environment.variables = {
+    XIM = "fcitx";
+    XIM_PROGRAM = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+  };
 
   i18n.inputMethod = {
     enable = true;

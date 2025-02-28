@@ -95,6 +95,14 @@ in
 
   # Enable StarShip.
   programs.starship.enable = true;
+  
+  # Enable Evolution.
+  programs.evolution = {
+    enable = true;
+    plugins = [ pkgs.evolution-ews ];
+  };
+  services.gnome.evolution-data-server.enable = true;
+  
 
   # Install Apps.
   home.packages = (with pkgs; [
@@ -103,7 +111,6 @@ in
     whitesur-gtk-theme # WhiteSur Gtk theme.
     gnome-tweaks # Tweaks to change looking.
     my-python
-    evolution # Email Client.
     qq
     wechat-uos
     # wpsoffice-cn # This version is old. Use Nur.
@@ -111,6 +118,7 @@ in
     jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     # nur.repos.novel2430.wpsoffice-cn # fcitx5 cannot input.
+    zotero
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

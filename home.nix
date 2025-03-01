@@ -101,7 +101,6 @@ in
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
-    whitesur-kde # WhiteSur KDE theme.
     gnome-tweaks # Tweaks to change looking.
     my-python
     qq
@@ -112,6 +111,8 @@ in
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
     zotero
+    jetbrains-clion
+    jetbrains-pycharm
     planner # wbs
     super-productivity # todo app
     gimp # image processing
@@ -119,7 +120,7 @@ in
     amberol # music player
     blanket # focus listening
     texliveFull # LaTeX
-    gummi # LaTeX IDE
+    texstudio # LaTeX IDE
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock
@@ -147,14 +148,6 @@ in
     cursorTheme = {
       name = "WhiteSur-cursors";
       package = pkgs.whitesur-cursors;
-    };
-  };
-  qt = {
-    enable = true;
-    platformTheme.name = "qtct";
-    style = {
-      name = "kvantum";
-      package = pkgs.libsForQt5.qtstyleplugin-kvantum;
     };
   };
   	xdg = {

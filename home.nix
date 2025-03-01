@@ -121,6 +121,7 @@ in
     blanket # focus listening
     texliveFull # LaTeX
     gummi # LaTeX IDE
+    impression # Make bootable device
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

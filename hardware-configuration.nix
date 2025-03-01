@@ -11,22 +11,22 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; # avoid Virtualbox error.
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/71d5cf82-85a3-4d1f-bc71-73248b181ee7";
+    { device = "/dev/disk/by-uuid/9fea3999-37e8-4c7b-9393-b2968a207324";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/04FE-42B7";
+    { device = "/dev/disk/by-uuid/7BE8-9972";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/650c54dc-f081-49f1-99ab-1280eeb29fcc"; }
+    [ { device = "/dev/disk/by-uuid/c801d762-a4d1-4839-bbfa-edc74c8e3106"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

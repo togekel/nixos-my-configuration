@@ -106,13 +106,11 @@ in
     qq
     wechat-uos
     # wpsoffice-cn # This version is old. Use Nur.
-    # jetbrains-clion # CLion for C Dev.
-    # jetbrains-pycharm # PyCharm for Python Dev.
+    jetbrains-clion # CLion for C Dev.
+    jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
     zotero
-    jetbrains-clion
-    jetbrains-pycharm
     planner # wbs
     super-productivity # todo app
     gimp # image processing

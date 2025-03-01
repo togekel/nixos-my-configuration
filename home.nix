@@ -120,7 +120,7 @@ in
     amberol # music player
     blanket # focus listening
     texliveFull # LaTeX
-    texstudio # LaTeX IDE
+    gummi # LaTeX IDE
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

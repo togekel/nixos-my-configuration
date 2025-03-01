@@ -95,20 +95,20 @@ in
 
   # Enable StarShip.
   programs.starship.enable = true;
-  
 
   # Install Apps.
   home.packages = (with pkgs; [
     whitesur-icon-theme # WhiteSur icon theme.
     whitesur-cursors # WhiteSur Cursor theme.
     whitesur-gtk-theme # WhiteSur Gtk theme.
+    whitesur-kde # WhiteSur KDE theme.
     gnome-tweaks # Tweaks to change looking.
     my-python
     qq
     wechat-uos
     # wpsoffice-cn # This version is old. Use Nur.
-    jetbrains-clion # CLion for C Dev.
-    jetbrains-pycharm # PyCharm for Python Dev.
+    # jetbrains-clion # CLion for C Dev.
+    # jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
     zotero
@@ -119,7 +119,7 @@ in
     amberol # music player
     blanket # focus listening
     texliveFull # LaTeX
-    texstudio # LaTeX IDE
+    gummi # LaTeX IDE
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock
@@ -132,7 +132,7 @@ in
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
   
-  # Set GTK Theme.
+  # Set GTK/QT Theme.
   home.sessionVariables.GTK_THEME = "WhiteSur-Light";
   gtk = {
     enable = true;
@@ -149,6 +149,24 @@ in
       package = pkgs.whitesur-cursors;
     };
   };
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+    style = {
+      name = "kvantum";
+      package = pkgs.libsForQt5.qtstyleplugin-kvantum;
+    };
+  };
+  	xdg = {
+  	  portal = {
+  	    enable = true;
+  	    extraPortals = with pkgs; [
+  	      xdg-desktop-portal
+  	      xdg-desktop-portal-gtk
+  	    ];
+  	    config.common.default = "*";
+  	  };
+  	};
 
   # Enable dconf.
   dconf = {

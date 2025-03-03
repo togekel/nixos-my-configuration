@@ -120,6 +120,7 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
+    varia # Downloader
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

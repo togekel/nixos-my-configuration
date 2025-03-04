@@ -23,7 +23,7 @@ let
     fromSource = true;
   });
   varia = pkgs.varia.overrideAttrs (finalAttrs: previousAttrs: {
-            propagatedBuildInputs = with python3Packages; [
+            propagatedBuildInputs = with pkgs.python3Packages; [
             pygobject3
             aria2p
             platformdirs

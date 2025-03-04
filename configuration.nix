@@ -163,7 +163,7 @@
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball {
       url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-      sha256 = "142b5v2wzzb2x0kidlyslz28x5gff7p127n6dznj6szx2962yrzb";
+      sha256 = "08gbnd2h2sfdgh2qn1kc6h1yv5ycvirn2hqkzri58fkss2m70vbi";
     }) {
       inherit pkgs;
     };
@@ -190,26 +190,6 @@
 
   # List services that you want to enable:
   
-  # Start the driver at boot
-	systemd.services.fprintd = {
-		wantedBy = [ "multi-user.target" ];
-		serviceConfig.Type = "simple";
-	};
-
-	# Install the driver
-	# services.fprintd.enable = true;
-	# If simply enabling fprintd is not enough, try enabling fprintd.tod...
-	# services.fprintd.tod.enable = true;
-	# ...and use one of the next four drivers
-	# services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix; # Goodix driver module
-	# services.fprintd.tod.driver = pkgs.libfprint-2-tod1-elan; # Elan(04f3:0c4b) driver
-	# services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090; # driver for 2016 ThinkPads
-	# services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a; # Goodix 550a driver (from Lenovo)
-
-	# however for focaltech 2808:a658, use fprintd with overidden package (without tod)
-	# services.fprintd.package = pkgs.fprintd.override {
-	#   libfprint = pkgs.libfprint-focaltech-2808-a658;
-	# };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

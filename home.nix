@@ -120,8 +120,7 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
-    python312Packages.platformdirs # need by varia
-    varia # Downloader
+    motrix # Downloader
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

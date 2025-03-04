@@ -120,8 +120,13 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
-    python312Packages.aria2p # Aria2p
-    varia # Aria downloader
+    varia.overrideAttrs (finalAttrs: previousAttrs: {
+      propagatedBuildInputs = with python3Packages; [
+        pygobject3
+        aria2p
+        platformdirs
+      ];
+    }) # Aria downloader
     wineWowPackages.waylandFull
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel

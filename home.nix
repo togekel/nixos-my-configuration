@@ -121,7 +121,7 @@ in
     gummi # LaTeX IDE
     impression # Make bootable device
     python312Packages.platformdirs # need by varia
-    # varia # Downloader
+    varia # Downloader
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

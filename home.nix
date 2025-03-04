@@ -120,6 +120,9 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
+    python312Packages.aria2p # Aria2p
+    varia # Aria downloader
+    wineWowPackages.waylandFull
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

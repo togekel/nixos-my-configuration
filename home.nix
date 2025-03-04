@@ -10,7 +10,6 @@ let
     p.numpy
     p.pandas
     p.matplotlib
-    p.platformdirs
   ]);
   dev-tools = (with pkgs; [
     gcc
@@ -121,6 +120,7 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
+    python312Packages.platformdirs # need by varia
     varia # Downloader
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel

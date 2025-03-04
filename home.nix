@@ -10,6 +10,7 @@ let
     p.numpy
     p.pandas
     p.matplotlib
+    p.platformdirs
   ]);
   dev-tools = (with pkgs; [
     gcc

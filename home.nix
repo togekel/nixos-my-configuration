@@ -120,8 +120,6 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
-    motrix # Downloader
-    logseq # Knowledge Management.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

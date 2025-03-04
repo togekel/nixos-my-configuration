@@ -22,13 +22,6 @@ let
   jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
     fromSource = true;
   });
-  varia = pkgs.varia.overrideAttrs (finalAttrs: previousAttrs: {
-            propagatedBuildInputs = with pkgs.python3Packages; [
-            pygobject3
-            aria2p
-            platformdirs
-          ];
-  });
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -127,8 +120,8 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
-    varia # Aria downloader
-    wineWowPackages.waylandFull
+    # varia # Aria downloader
+    # wineWowPackages.waylandFull # wine for win apps.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

@@ -163,7 +163,7 @@
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball {
       url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-      sha256 = "04jdaq167yy17rsdzd5mz4xbgbn84svlg4ph2i3hkvkkd1kdqd34";
+      sha256 = "1wki1k5clybps466y9yn3lhxs93gy88ri76valw1m2ndqm2lks3l";
     }) {
       inherit pkgs;
     };
@@ -225,6 +225,7 @@
   
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

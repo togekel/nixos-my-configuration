@@ -120,6 +120,7 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
+    motrix # Downloader
     # varia # Aria downloader
     # wineWowPackages.waylandFull # wine for win apps.
   ]) ++ (with pkgs.gnomeExtensions; [

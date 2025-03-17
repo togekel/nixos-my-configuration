@@ -121,9 +121,7 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
-    motrix # Downloader
-    # varia # Aria downloader
-    # wineWowPackages.waylandFull # wine for win apps.
+    varia # Aria downloader
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

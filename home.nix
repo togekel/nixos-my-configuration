@@ -111,6 +111,7 @@ in
     jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
+    zotero-beta
     planner # wbs
     super-productivity # todo app
     gimp # image processing
@@ -123,11 +124,7 @@ in
     motrix # Downloader
     # varia # Aria downloader
     # wineWowPackages.waylandFull # wine for win apps.
-  ]) ++ [
-		(pkgs.zotero-beta.overrideAttrs (finalAttrs: previousAttrs: {
-			LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-		}))
-	] ++ (with pkgs.gnomeExtensions; [
+  ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock
     logo-menu
@@ -138,6 +135,9 @@ in
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
+  
+  # Fix libstdc++.so.6 missing bug.
+  home.sessionVariables.LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   
   # Set GTK/QT Theme.
   home.sessionVariables.GTK_THEME = "WhiteSur-Light";

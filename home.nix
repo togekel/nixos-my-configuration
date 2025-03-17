@@ -22,7 +22,7 @@ let
   jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
     fromSource = true;
   });
-  zotero-beta-fixed = (zotero.overrideAttrs (final: previous: {
+  zotero-beta-fixed = (pkgs.zotero.overrideAttrs (final: previous: {
     libPath = lib.makeLibraryPath [
 			alsa-lib
       atk

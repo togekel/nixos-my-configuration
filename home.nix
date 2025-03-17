@@ -110,7 +110,7 @@ in
     jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
-    zotero-beta # zotero version somehow meets bugs (missing libstdc++6)
+    zotero-beta # zotero somehow meets bugs (missing libstdc++6)
     planner # wbs
     super-productivity # todo app
     gimp # image processing
@@ -137,6 +137,7 @@ in
   
   # Set GTK/QT Theme.
   home.sessionVariables.GTK_THEME = "WhiteSur-Light";
+  home.sessionVariables.LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib"; # fix libstdc++.so.6 not found.
   gtk = {
     enable = true;
     iconTheme = {

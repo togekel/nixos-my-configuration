@@ -110,7 +110,7 @@ in
     jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
-    zotero
+    zotero-beta # zotero version somehow meets bugs (missing libstdc++6)
     planner # wbs
     super-productivity # todo app
     gimp # image processing

@@ -276,7 +276,7 @@ in
 				name = "便捷";
 				translate = false;
 			};
-			"org/gnome/desktop/app-folders/folders/ff66f84b-120c-4f5f-b1be-ea30109916f9" {
+			"org/gnome/desktop/app-folders/folders/ff66f84b-120c-4f5f-b1be-ea30109916f9" = {
 				apps = [
 					"com.tencent.wechat.desktop"
 					"wemeet-bin.desktop""qq.desktop"

@@ -264,7 +264,7 @@ in
 					"org.gnome.Extensions.desktop"
 					"org.gnome.Software.desktop"
 				];
-				name = "附件"
+				name = "附件";
 				translate = false;
 			};
 			"org/gnome/desktop/app-folders/folders/c4fc5d17-3acc-44b9-8511-7af4dbeb81bb" = {

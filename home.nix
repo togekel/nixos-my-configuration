@@ -22,9 +22,48 @@ let
   jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
     fromSource = true;
   });
-  zotero-beta-fixed = pkgs.zotero-beta.overrideAttrs (finalAttrs: previousAttrs: {
-  		LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-  	}); # fix libstdc++.so.6 missing error.
+  zotero-beta-fixed = (zotero.overrideAttrs (final: previous: {
+    libPath = lib.makeLibraryPath [
+			alsa-lib
+      atk
+      cairo
+      dbus-glib
+      gdk-pixbuf
+      glib
+      gtk3
+      libGL
+      libva
+      xorg.libX11
+      xorg.libXcomposite
+      xorg.libXcursor
+      xorg.libXdamage
+      xorg.libXext
+      xorg.libXfixes
+      xorg.libXi
+      xorg.libXrandr
+      xorg.libXtst
+      xorg.libxcb
+      libgbm
+      pango
+      pciutils
+    ]
+    + ":"
+    + lib.makeSearchPathOutput "lib" "lib" [ stdenv.cc.cc ];
+    postFixup = ''
+			for executable in \
+        zotero-bin plugin-container updater vaapitest \
+        minidump-analyzer glxtest
+      do
+        if [ -e "$out/usr/lib/zotero-bin-${final.version}/$executable" ]; then
+          patchelf --interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
+            "$out/usr/lib/zotero-bin-${final.version}/$executable"
+        fi
+      done
+      find . -executable -type f -exec \
+        patchelf --set-rpath "$libPath" \
+          "$out/usr/lib/zotero-bin-${final.version}/{}" \;
+    '';
+	})); # quick fix libstdc++.so.6 missing error.
 in
 {
   # Home Manager needs a bit of information about you and the

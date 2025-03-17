@@ -362,6 +362,18 @@ in
         enable-tiling-system-windows-suggestions = true;
         top-edge-maximize = true;
       };
+      "org/gnome/shell/extensions/blur-my-shell/applications" = {
+				blur = true;
+				enable-all = true;
+			};
+			"org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+				blur = true;
+				static-blur = false;
+			};
+			"org/gnome/shell/extensions/blur-my-shell/panel" = {
+				force-light-text = true;
+				static-blur = false;
+			};
     };
   };
 

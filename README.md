@@ -34,7 +34,7 @@
 - [x] LaTeX support (TeXLiveFull, texstudio).
 - [x] Bootable Device Maker (Impression).
 - [x] Zotero (Beta, bug fixed).
-- [x] Varia (Aria Downloader).
+- [x] Motrix (Downloader).
 ## Useful Shell Alias
 - ll: `ls -l`
 - modify: fetch configuration repo from github and cd

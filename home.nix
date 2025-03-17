@@ -121,7 +121,7 @@ in
     texliveFull # LaTeX
     gummi # LaTeX IDE
     impression # Make bootable device
-    varia # Aria downloader
+		motrix # Downloader.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

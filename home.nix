@@ -123,10 +123,11 @@ in
     motrix # Downloader
     # varia # Aria downloader
     # wineWowPackages.waylandFull # wine for win apps.
-  ]) ++ 
-  pkgs.zotero-beta.overrideAttrs (finalAttrs: previousAttrs: {
-		LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-	}) ++ (with pkgs.gnomeExtensions; [
+  ]) ++ [
+		(pkgs.zotero-beta.overrideAttrs (finalAttrs: previousAttrs: {
+			LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+		}))
+	] ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock
     logo-menu

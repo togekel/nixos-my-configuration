@@ -167,6 +167,123 @@ in
   dconf = {
     enable = true;
     settings = {
+			"org/gnome/desktop/app-folders" = {
+				folder-children = [
+					"Utilities"
+					"YaST"
+					"Pardus"
+					"3f168635-fcc7-478d-9cc0-6c53c016b855"
+					"ff66f84b-120c-4f5f-b1be-ea30109916f9"
+					"36b23990-0fba-4117-b12e-70dd67f7d40d"
+					"8df02a2b-1971-4662-9958-79020815a932"
+					"45325cfe-068d-4172-8200-360e786a510a"
+					"a9a37de2-e709-4139-9a1e-ffb28e3210e6"
+					"c4fc5d17-3acc-44b9-8511-7af4dbeb81bb"
+				];
+			};
+			"org/gnome/desktop/app-folders/folders/36b23990-0fba-4117-b12e-70dd67f7d40d" = {
+				apps = [
+					"org.gnome.Snapshot.desktop"
+					"gimp.desktop"
+					"io.bassi.Amberol.desktop"
+					"com.rafaelmardojai.Blanket.desktop"
+					"vlc.desktop"
+				];
+				name = "图像影音";
+				translate = false;
+			};
+			"org/gnome/desktop/app-folders/folders/3f168635-fcc7-478d-9cc0-6c53c016b855" = {
+				apps = [
+					"fcitx5-configtool.desktop"
+					"org.fcitx.Fcitx5.desktop"
+					"org.fcitx.fcitx5-migrator.desktop"
+					"cups.desktop"
+					"kbd-layout-viewer5.desktop"
+				];
+				name = "输入输出";
+				translate = false;
+			};
+			"org/gnome/desktop/app-folders/folders/45325cfe-068d-4172-8200-360e786a510a" = {
+				apps = [
+					"wps-office-wps.desktop"
+					"wps-office-et.desktop"
+					"wps-office-wpp.desktop"
+					"wps-office-prometheus.desktop"
+					"wps-office-pdf.desktop"
+				];
+				name = "办公";
+			};
+			"org/gnome/desktop/app-folders/folders/8df02a2b-1971-4662-9958-79020815a932" = {
+				apps = [
+					"gummi.desktop"
+					"clion.desktop"
+					"zotero.desktop"
+					"pycharm-professional.desktop"
+					"super-productivity.desktop"
+					"app.drey.Planner.desktop"
+				];
+				name = "科研";
+				translate = false;
+			};
+			"org/gnome/desktop/app-folders/folders/Pardus" = {
+				categories = [
+					"X-Pardus-Apps"
+				];
+				name = "X-Pardus-Apps.directory";
+				translate=true;
+			};
+			"org/gnome/desktop/app-folders/folders/Utilities" = {
+				apps = [
+					"org.freedesktop.GnomeAbrt.desktop"
+					"nm-connection-editor.desktop"
+					"org.gnome.baobab.desktop"
+					"org.gnome.Connections.desktop"
+					"org.gnome.DejaDup.desktop"
+					"org.gnome.DiskUtility.desktop"
+					"org.gnome.Evince.desktop"
+					"org.gnome.FileRoller.desktop"
+					"org.gnome.font-viewer.desktop"
+					"org.gnome.Loupe.desktop"
+					"org.gnome.seahorse.Application.desktop"
+					"org.gnome.tweaks.desktop"
+					"org.gnome.Usage.desktop"
+				];
+				categories = [ "X-GNOME-Utilities" ];
+				name = "X-GNOME-Utilities.directory";
+				translate = true;
+			};
+			"org/gnome/desktop/app-folders/folders/YaST" = {
+				categories = [ "X-SuSE-YaST" ];
+				name = "suse-yast.directory";
+				translate = true;
+			};
+			"org/gnome/desktop/app-folders/folders/a9a37de2-e709-4139-9a1e-ffb28e3210e6" = {
+				apps = [ 
+					"org.gnome.SystemMonitor.desktop"
+					"org.gnome.clocks.desktop"
+					"org.gnome.Extensions.desktop"
+					"org.gnome.Software.desktop"
+				];
+				name = "附件"
+				translate = false;
+			};
+			"org/gnome/desktop/app-folders/folders/c4fc5d17-3acc-44b9-8511-7af4dbeb81bb" = {
+				apps = [
+					"io.gitlab.adhami3310.Impression.desktop"
+					"org.gnome.TextEditor.desktop"
+					"motrix.desktop"
+				];
+				name = "便捷";
+				translate = false;
+			};
+			"org/gnome/desktop/app-folders/folders/ff66f84b-120c-4f5f-b1be-ea30109916f9" {
+				apps = [
+					"com.tencent.wechat.desktop"
+					"wemeet-bin.desktop""qq.desktop"
+				];
+				name = "聊天";
+				translate = false;
+			};
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = (with pkgs.gnomeExtensions; [

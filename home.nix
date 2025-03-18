@@ -35,8 +35,11 @@ in
   # Install Firefox.
   programs.firefox = {
     enable = true;
-    enableGnomeExtensions = true;
-    package = pkgs.firefox-bin;
+    package = pkgs.firefox-bin.override {
+			nativeMessagingHosts = [
+				pkgs.gnome-browser-connector
+			];
+		};
     languagePacks = [
 			"zh-CN"
 		];

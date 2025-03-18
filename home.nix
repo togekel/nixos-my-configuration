@@ -40,9 +40,14 @@ in
     languagePacks = [
 			"zh-CN"
 		];
-		search = {
-			default = "Bing";
-			force = true;
+		profiles.feng = {
+			id = 0;
+			name = "feng";
+			isDefault = true;
+			search = {
+				default = "Bing";
+				force = true;
+			};
 		};
   };
   

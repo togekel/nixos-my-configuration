@@ -35,11 +35,22 @@ in
   # Install Firefox.
   programs.firefox = {
     enable = true;
+    enableGnomeExtensions = true;
     package = pkgs.firefox-bin;
     languagePacks = [
 			"zh-CN"
 		];
+		search = {
+			default = "Bing";
+			force = true;
+		};
   };
+  
+  # Install VSCode.
+  programs.vscode = {
+		enable = true;
+		package = pkgs.vscode.fhs;
+	};
   
   # Install Thunderbird.
 	programs.thunderbird.enable = true;
@@ -115,7 +126,6 @@ in
     my-python
     qq
     wechat-uos
-    vscode # VSCode.
     # wpsoffice-cn # This version is old. Use Nur.
     jetbrains-clion # CLion for C Dev.
     jetbrains-pycharm # PyCharm for Python Dev.
@@ -140,7 +150,6 @@ in
     blur-my-shell
     appindicator # systray
     tiling-shell # tiling-shell
-    # new-mail-indicator # New mail notification
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
@@ -311,7 +320,6 @@ in
           appindicator.extensionUuid
           light-style.extensionUuid
           tiling-shell.extensionUuid
-          # new-mail-indicator.extensionUuid
         ]);
       };
       "org/gnome/Console" = {

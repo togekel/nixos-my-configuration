@@ -36,6 +36,9 @@ in
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-bin;
+    languagePacks = [
+			"zh-CN"
+		];
   };
   
   # Install Thunderbird.
@@ -52,6 +55,7 @@ in
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
 
     shellAliases = {
@@ -412,4 +416,7 @@ in
       sha256 = "1vj0i17izsgig124d47qwhjjhih4ma6k9gvkfh3qnz7qhkvyzp5z";
     };
   };
+  
+  # Auto start apps.
+  home.file.".config/autostart".text = "motrix.desktop";
 }

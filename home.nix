@@ -16,13 +16,12 @@ let
     gnumake
     cmake
   ]);
-  jetbrains-clion = pkgs.jetbrains.clion.overrideAttrs (finalAttrs: previousAttrs: {
-    fromSource = true;
-  });
-  jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
-    fromSource = true;
-  });
-  libForGcc = pkgs.stdenv.cc.cc.lib;
+  # jetbrains-clion = pkgs.jetbrains.clion.overrideAttrs (finalAttrs: previousAttrs: {
+  #   fromSource = true;
+  # });
+  # jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
+  #   fromSource = true;
+  # });
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -106,9 +105,10 @@ in
     my-python
     qq
     wechat-uos
+    vscode # VSCode.
     # wpsoffice-cn # This version is old. Use Nur.
-    jetbrains-clion # CLion for C Dev.
-    jetbrains-pycharm # PyCharm for Python Dev.
+    # jetbrains-clion # CLion for C Dev.
+    # jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
     zotero-beta
@@ -135,7 +135,7 @@ in
   dev-tools; # tools for c dev.
   
   # Fix libstdc++.so.6 missing bug.
-  home.sessionVariables.LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+  # home.sessionVariables.LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   
   # Set GTK/QT Theme.
   home.sessionVariables.GTK_THEME = "WhiteSur-Light";

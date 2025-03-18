@@ -37,6 +37,9 @@ in
     enable = true;
     package = pkgs.firefox-bin;
   };
+  
+  # Install Thunderbird.
+	programs.thunderbird.enable = true;
 
   # Install and config git.
   programs.git = {
@@ -125,6 +128,7 @@ in
     gummi # LaTeX IDE
     impression # Make bootable device
 		motrix # Downloader.
+		birdtray # Thunderbird tray.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock
@@ -132,7 +136,7 @@ in
     blur-my-shell
     appindicator # systray
     tiling-shell # tiling-shell
-    new-mail-indicator # New mail notification
+    # new-mail-indicator # New mail notification
   ]) ++ 
   my-zsh-additional-pkgs ++
   dev-tools; # tools for c dev.
@@ -303,7 +307,7 @@ in
           appindicator.extensionUuid
           light-style.extensionUuid
           tiling-shell.extensionUuid
-          new-mail-indicator.extensionUuid
+          # new-mail-indicator.extensionUuid
         ]);
       };
       "org/gnome/Console" = {

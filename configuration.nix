@@ -206,13 +206,6 @@
     '';
   };
   
-  # Enable Evolution.
-  programs.evolution = {
-    enable = true;
-    plugins = [ pkgs.evolution-ews ];
-  };
-  services.gnome.evolution-data-server.enable = true;
-  
   # Enable power management.
   powerManagement.enable = true;
   services.thermald.enable = true;

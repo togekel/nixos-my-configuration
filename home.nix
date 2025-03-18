@@ -243,6 +243,7 @@ in
 					"pycharm-professional.desktop"
 					"super-productivity.desktop"
 					"app.drey.Planner.desktop"
+					"code.desktop"
 				];
 				name = "科研";
 				translate = false;

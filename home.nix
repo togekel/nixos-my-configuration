@@ -28,7 +28,7 @@ let
   my-bluemail = pkgs.bluemail.overrideAttrs (finalAttrs: previousAttrs: {
 		src = builtins.fetchurl {
 			url = "https://download.bluemail.me/BlueMail/deb/BlueMail.deb";
-			hash = "";
+			sha256 = "";
 		};
 	});
 in

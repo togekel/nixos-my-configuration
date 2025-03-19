@@ -450,13 +450,5 @@ in
       sha256 = "1vj0i17izsgig124d47qwhjjhih4ma6k9gvkfh3qnz7qhkvyzp5z";
     };
   };
-  
-  # Auto start apps.
-  xdg.autostart = {
-		enable = true;
-		entries = [
-			"${my-bluemail}/share/applications/bluemail.desktop"
-			"${pkgs.motrix}/share/applications/motrix.desktop"
-		];
-	};
+  # Do not set autostart apps. Not useful. Add in Tweaks.
 }

@@ -60,8 +60,6 @@ in
 		package = pkgs.vscode.fhs;
 	};
 	
-	# Install Thunderbird.
-	programs.thunderbird.enable = true;
 
   # Install and config git.
   programs.git = {

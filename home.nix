@@ -30,6 +30,10 @@ let
 			url = "https://download.bluemail.me/BlueMail/deb/BlueMail.deb";
 			sha256 = "0p3mz3gsk7jz52pzksxxxbh3dx0bn1n4pin1na1z9xizfiphwxkn";
 		};
+		postFixup = ''
+			substituteInPlace $out/share/applications/bluemail.desktop \
+				--replace-quiet 'Exec=bluemail' "Exec=bluemail --in-process-gpu --no-sandbox"
+		'';
 	});
 in
 {

@@ -156,12 +156,6 @@
 
   # Enable Zsh.
   programs.zsh.enable = true;
-  
-  # Enable Thunderbird.
-  programs.thunderbird = {
-		enable = true;
-		package = pkgs.thunderbird-bin;
-	};
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

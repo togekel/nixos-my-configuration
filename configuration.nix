@@ -158,7 +158,10 @@
   programs.zsh.enable = true;
   
   # Enable Thunderbird.
-  programs.thunderbird.enable = true;
+  programs.thunderbird = {
+		enable = true;
+		package = pkgs.thunderbird-latest-unwrapped;
+	};
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

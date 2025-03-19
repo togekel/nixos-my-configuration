@@ -162,7 +162,7 @@ in
     gummi # LaTeX IDE
     impression # Make bootable device
 		motrix # Downloader.
-		bluemail
+		my-bluemail # Email client.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

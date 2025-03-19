@@ -113,6 +113,7 @@
   documentation.nixos.enable = false;
   
   # Enable Virtualbox.
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; # fix bug.
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members =  [ "feng" ];
   virtualisation.virtualbox.host.enableExtensionPack = true;

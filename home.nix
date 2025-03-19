@@ -327,6 +327,7 @@ in
 				apps = [
 					"com.tencent.wechat.desktop"
 					"wemeet-bin.desktop""qq.desktop"
+					"bluemail.desktop"
 				];
 				name = "聊天";
 				translate = false;
@@ -451,5 +452,11 @@ in
   };
   
   # Auto start apps.
-  home.file.".config/autostart".text = "motrix.desktop";
+  xdg.autostart = {
+		enable = true;
+		entries = [
+			"${my-bluemail}/share/applications/bluemail.desktop"
+			"${pkgs.motrix}/share/applications/motrix.desktop"
+		];
+	};
 }

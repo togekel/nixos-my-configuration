@@ -160,7 +160,7 @@
   # Enable Thunderbird.
   programs.thunderbird = {
 		enable = true;
-		package = pkgs.thunderbird-latest-unwrapped;
+		package = pkgs.thunderbird-bin;
 	};
 
   # Allow unfree packages

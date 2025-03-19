@@ -25,6 +25,12 @@ let
   jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
     fromSource = true;
   });
+  my-bluemail = pkgs.bluemail.overrideAttrs (finalAttrs: previousAttrs: {
+		src = fetchurl {
+			url = "https://download.bluemail.me/BlueMail/deb/BlueMail.deb";
+			hash = "";
+		};
+	});
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -73,7 +79,14 @@ in
     enable = true;
     enableCompletion = true;
     autocd = true;
-    autosuggestion.enable = true;
+    autosuggestion= {
+			enable = true;
+			strategy = [
+				"history"
+				"completion"
+				"match_prev_cmd"
+			];
+		};
     syntaxHighlighting.enable = true;
 
     shellAliases = {

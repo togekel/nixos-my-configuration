@@ -156,6 +156,7 @@
 
   # Enable Zsh.
   programs.zsh.enable = true;
+  environment.pathsToLink = [ "/share/zsh" ]; # useful for completion.
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

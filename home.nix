@@ -60,6 +60,8 @@ in
 		package = pkgs.vscode.fhs;
 	};
 	
+	# Install Thunderbird.
+	programs.thunderbird.enable = true;
 
   # Install and config git.
   programs.git = {
@@ -149,8 +151,8 @@ in
     gummi # LaTeX IDE
     impression # Make bootable device
 		motrix # Downloader.
-		thunderbird # Email Client.
-		birdtray # Thunderbird tray.
+		# thunderbird # Email Client.
+		# birdtray # Thunderbird tray.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

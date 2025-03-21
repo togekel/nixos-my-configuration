@@ -70,6 +70,7 @@ in
 		package = pkgs.vscode.fhs;
 	};
 	
+	home.sessionVariables.NIXOS_OZONE_WL = "1"; # allow vscode to run in wayland.
 
   # Install and config git.
   programs.git = {
@@ -167,6 +168,7 @@ in
     impression # Make bootable device
 		motrix # Downloader.
 		my-bluemail # Email client.
+		sageWithDoc # Sagemath.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

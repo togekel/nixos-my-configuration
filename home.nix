@@ -167,6 +167,7 @@ in
 		motrix # Downloader.
 		my-bluemail # Email client.
 		sageWithDoc # Sagemath.
+		dotnet-sdk_9 # runtime sdk for vscode notebook.
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

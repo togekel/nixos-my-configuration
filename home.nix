@@ -69,8 +69,6 @@ in
 		enable = true;
 		package = pkgs.vscode.fhs;
 	};
-	
-	home.sessionVariables.NIXOS_OZONE_WL = "1"; # allow vscode to run in wayland.
 
   # Install and config git.
   programs.git = {

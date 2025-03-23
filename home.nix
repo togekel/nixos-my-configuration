@@ -157,7 +157,7 @@ in
     # jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
-    nur.repos.xddxdd.baidunetdisk # BaiduNetdisk.
+    # nur.repos.xddxdd.baidunetdisk # BaiduNetdisk.
     zotero-beta
     planner # wbs
     super-productivity # todo app
@@ -172,6 +172,7 @@ in
 		my-bluemail # Email client.
 		sageWithDoc # Sagemath.
 		dotnet-sdk_9 # runtime sdk for vscode notebook.
+		texstudio
   ]) ++ (with pkgs.gnomeExtensions; [
     kimpanel
     dash-to-dock

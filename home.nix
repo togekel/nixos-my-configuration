@@ -45,6 +45,11 @@ in
   home.username = "feng";
   home.homeDirectory = "/home/feng";
   
+  # Allow Unfree pkgs.
+  nixpkgs.config.permittedInsecurePackages = [
+		"electron-11.5.0"
+	];
+  
   # Install Firefox.
   programs.firefox = {
     enable = true;

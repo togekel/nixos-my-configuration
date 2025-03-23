@@ -7,7 +7,6 @@ let
     thefuck
   ]);
   my-python = pkgs.python3.withPackages (p: [
-  		p.pip
     p.numpy
     p.pandas
     p.matplotlib

@@ -61,7 +61,7 @@ in
 			name = "feng";
 			isDefault = true;
 			search = {
-				default = "Bing";
+				default = "bing";
 				force = true;
 			};
 		};
@@ -157,6 +157,7 @@ in
     # jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
+    nur.repos.xddxdd.baidunetdisk # BaiduNetdisk.
     zotero-beta
     planner # wbs
     super-productivity # todo app

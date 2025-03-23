@@ -8,7 +8,7 @@
 - [x] chinese fonts, nerd fonts, meslo fonts, etc.
 - [x] fcitx5 chinese supported.
 - [x] enable zsh.
-- [x] firefox-bin.
+- [x] firefox-bin (slightly profiled).
 - [x] virtualbox.
 - [x] gnome-software for graphical flatpak.
 - [x] qq.
@@ -16,7 +16,7 @@
 - [x] wemeet-wayland-screenshare(nur).
 - [x] wpsoffice-cn (nur, you should search and install winfonts by yourself, and it's easy).
 - [x] preset github ssh key (personal use).
-- [x] python pkgs (numpy,pandas,matplotlib).
+- [x] python pkgs (numpy,pandas,matplotlib,jupyter,notebook,scipy).
 - [x] macos-like gtk theme (installed and selected by default).
 - [x] bigsur hd background (~/.bigsur.jpg, auto selected).
 - [x] app menu.
@@ -27,14 +27,16 @@
 - [x] dash-to-dock.
 - [x] dconf settings.
 - [x] tiling shell (selected).
-- [x] evolution with message notify (gnome extension new-mail-indicator selected).
-- [x] C/C++ and Python IDE (Clion, Pycharm both fromSource). 
+- [x] BlueMail (Email Client).
+- [x] VSCode (FHS). 
 - [x] gnome-planner (for WBS).
 - [x] super-productivity (for TODO).
-- [x] LaTeX support (TeXLiveFull, texstudio).
+- [x] LaTeX support (TeXLiveFull, gummi).
 - [x] Bootable Device Maker (Impression).
 - [x] Zotero (Beta, bug fixed).
-- [x] Motrix (Downloader).
+- [x] Motrix (Downloader, for firefox ext select 'Send to Motrix').
+- [x] SageMath.
+- [x] BaiduNetdisk.
 ## Useful Shell Alias
 - ll: `ls -l`
 - modify: fetch configuration repo from github and cd

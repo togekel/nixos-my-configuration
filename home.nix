@@ -13,18 +13,22 @@ let
     p.matplotlib
     p.scipy
     p.sympy
+    p.jupyter
+    p.notebook
   ]);
   dev-tools = (with pkgs; [
     gcc
     gnumake
     cmake
+    pandoc
+    ninja
   ]);
-  jetbrains-clion = pkgs.jetbrains.clion.overrideAttrs (finalAttrs: previousAttrs: {
-    fromSource = true;
-  });
-  jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
-    fromSource = true;
-  });
+  # jetbrains-clion = pkgs.jetbrains.clion.overrideAttrs (finalAttrs: previousAttrs: {
+  #  fromSource = true;
+  # });
+  # jetbrains-pycharm = pkgs.jetbrains.pycharm-professional.overrideAttrs (finalAttrs: previousAttrs: {
+  #  fromSource = true;
+  # });
   my-bluemail = pkgs.bluemail.overrideAttrs (finalAttrs: previousAttrs: {
 		src = builtins.fetchurl {
 			url = "https://download.bluemail.me/BlueMail/deb/BlueMail.deb";
@@ -150,8 +154,8 @@ in
     qq
     wechat-uos
     # wpsoffice-cn # This version is old. Use Nur.
-    jetbrains-clion # CLion for C Dev.
-    jetbrains-pycharm # PyCharm for Python Dev.
+    # jetbrains-clion # CLion for C Dev.
+    # jetbrains-pycharm # PyCharm for Python Dev.
     nur.repos.novel2430.wemeet-bin-bwrap-wayland-screenshare
     nur.repos.novel2430.wpsoffice-cn # winfonts needed.
     zotero-beta

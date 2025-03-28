@@ -170,7 +170,7 @@ in
     impression # Make bootable device
 		motrix # Downloader.
 		my-bluemail # Email client.
-		sageWithDoc # Sagemath.
+		# sageWithDoc # Sagemath.
 		dotnet-sdk_9 # runtime sdk for vscode notebook.
 		texstudio
   ]) ++ (with pkgs.gnomeExtensions; [

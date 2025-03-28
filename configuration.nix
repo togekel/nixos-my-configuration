@@ -72,6 +72,12 @@
     wqy_zenhei
     meslo-lg
     mononoki
+    maple-mono
+    maple-mono-NF
+    maple-mono-otf
+    maple-mono-woff2
+    maple-mono-SC-NF
+    maple-mono-autohint
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
 
